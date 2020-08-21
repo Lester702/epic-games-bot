@@ -24,8 +24,7 @@ def GetGames(EMAIL, PASSWORD):
         try:
             drivers[i].find_element_by_class_name("css-zc5dwj-Button-styles__main").click()
         except:
-            return "Already Purchased"
-            break
+            pass
 
         #Log in to Epic Games
         drivers[i].find_element_by_id("login-with-epic").click()
@@ -37,7 +36,4 @@ def GetGames(EMAIL, PASSWORD):
         try:
             drivers[i].find_element_by_class_name("btn btn-primary").click()
         except:
-            return "Login Failed"
-            break
-
-        return "Success"
+            pass
