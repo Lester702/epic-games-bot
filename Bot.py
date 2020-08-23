@@ -5,11 +5,11 @@ from Errors import AlreadyPurchasedError, LoginFailedError, ReCaptchaError
 
 
 def GetGames(EMAIL, PASSWORD, PATH):
-    drivers = [webdriver.Chrome(PATH), webdriver.Chrome(PATH)]
+    driver = webdriver.Chrome(PATH)
     elements = [0, 0]
     index = 0
 
-    for driver in drivers:
+    for driver in range(0, 2):
         #Window settings
         driver.set_window_size(719, 808)
 
